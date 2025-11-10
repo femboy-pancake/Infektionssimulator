@@ -32,4 +32,9 @@ public class humanScript : MonoBehaviour
             targetPos = new Vector3(x, y, 0);
         }
     }
+    public void SpawnInfected()
+    {
+        Instantiate(infected, this.transform.position, this.transform.rotation);
+        Destroy(gameObject);
+    }
 }

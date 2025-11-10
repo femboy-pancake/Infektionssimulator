@@ -7,7 +7,10 @@ public class SpawnScript : MonoBehaviour
     {
         for (var i = 0; i < 50; i++)
         {
-            Instantiate(prefab, new Vector3(i * 2.0f, 0, 0), Quaternion.identity);
+            float x = Random.Range(-11f, 11f);
+            float y = Random.Range(4.5f, -4.5f);
+            GameObject humanInstance = Instantiate(prefab, new Vector3(i * 2.0f, 0, 0), Quaternion.identity);
+            humanInstance.transform.position = new Vector3(x, y, 0);
         }
     }
     // Update is called once per frame
@@ -22,13 +25,11 @@ public class SpawnScript : MonoBehaviour
         {
 
 
-            //Other.transform.GetComponent<playerScript>().GiveShield();
 
             Debug.Log("Hit: " + Other);
 
             {
-                float x = Random.Range(-11f, 11f);
-                float y = Random.Range(4.5f, -4.5f);
+                
             }
 
 

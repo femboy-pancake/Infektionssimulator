@@ -7,6 +7,7 @@ public class InfectedScript : MonoBehaviour
     public float speed = 5f;
     private Transform target;
     public GameObject human;
+    private GameObject infected;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -30,15 +31,11 @@ public class InfectedScript : MonoBehaviour
         {
 
 
-            Other.transform.GetComponent<human>().TakeDamage();
+            Other.transform.GetComponent<humanScript>().SpawnInfected();
 
             Debug.Log("Hit: " + Other);
 
-            Destroy(Other.gameObject);
-            Other.transform.position, Other.transform.rotation);
-            Other.IsDestroyed(gameObject);
-
-            Instantiate(infected, this.transform.position, this.transform.rotation);
+            
         }
     }
 }
