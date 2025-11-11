@@ -105,6 +105,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   speed: 5
   infected: {fileID: 3532028862761319202, guid: 3f7c0d3b2edab93429ed8d8d0af72fb6, type: 3}
+  immune: {fileID: 3244508348460493497, guid: 6f30f636f687d0c4598a286c2415e534, type: 3}
 --- !u!50 &6314179271286777701
 Rigidbody2D:
   serializedVersion: 5

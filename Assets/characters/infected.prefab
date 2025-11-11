@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: -5, y: -4, z: 0}
   speed: 6
+  human: {fileID: 0}
 --- !u!114 &4835021220588993491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +193,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   speed: 5
+  infected: {fileID: 1822267567701667435, guid: aec2b1c8a7e129e45a079d3c26bd8c0a, type: 3}
+  immune: {fileID: 8533476315546791673, guid: 853132620a909d14588667eb3a05ef24, type: 3}

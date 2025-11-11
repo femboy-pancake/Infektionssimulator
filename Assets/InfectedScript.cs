@@ -37,5 +37,17 @@ public class InfectedScript : MonoBehaviour
 
             
         }
+
+
+
+        else if (Other.tag == "immune")
+
+
+        {
+            Other.transform.GetComponent<ImmuneScript>().SpawnInfected();
+
+        }
     }
+    
+
 }

@@ -5,7 +5,7 @@ public class SpawnScript : MonoBehaviour
     public GameObject prefab;
     void Start()
     {
-        for (var i = 0; i < 50; i++)
+        for (var i = 0; i < 10; i++)
         {
             float x = Random.Range(-11f, 11f);
             float y = Random.Range(4.5f, -4.5f);
@@ -16,23 +16,22 @@ public class SpawnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D Other)
     {
-        if (Other.tag == "infected")
+        if (Other.tag == "human")
         {
 
 
+            Other.transform.GetComponent<humanScript>().SpawnImmune();
 
             Debug.Log("Hit: " + Other);
 
-            {
-                
-            }
-
 
         }
+
+
     }
 }
