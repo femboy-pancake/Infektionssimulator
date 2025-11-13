@@ -25,7 +25,7 @@ public class SpawnScript : MonoBehaviour
         {
 
 
-            Other.transform.GetComponent<humanScript>().SpawnImmune();
+            Other.transform.GetComponent<humanScript>().Spawn();
 
             Debug.Log("Hit: " + Other);
 

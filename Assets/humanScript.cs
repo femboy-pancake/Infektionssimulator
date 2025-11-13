@@ -35,11 +35,11 @@ public class humanScript : MonoBehaviour
             targetPos = new Vector3(x, y, 0);
         }
     }
-    public void SpawnInfected()
+    public void Spawn()
     {
 
         diceRoll = Random.Range(0, 100);
-        if (diceRoll >= 50 && gameObject.tag == "human")
+        if (diceRoll <= 50 && gameObject.tag == "human")
         {
             
             Instantiate(infected, this.transform.position, this.transform.rotation);
@@ -47,20 +47,20 @@ public class humanScript : MonoBehaviour
             Destroy(gameObject);
 
         }
-    }
 
-    public void SpawnImmune()
-    {
-
-        diceRoll = Random.Range(0, 100);
-
-        if (diceRoll <= 51 && gameObject.tag == "immune")
+        else if (diceRoll >= 51 && gameObject.tag == "human")
         {
             Instantiate(immune, this.transform.position, this.transform.rotation);
             GetComponent<ImmuneScript>().enabled = false;
             Destroy(gameObject);
+
+            
         }
+
     }
+
+    
+    
 
     
         

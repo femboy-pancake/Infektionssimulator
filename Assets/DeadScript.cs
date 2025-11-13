@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ImmuneScript : MonoBehaviour
+public class DeadScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,14 +12,5 @@ public class ImmuneScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D Other)
-    {
-        if (Other.tag == "immune")
-        {
-            Other.transform.GetComponent<humanScript>().Spawn();
-        }
     }
 }
