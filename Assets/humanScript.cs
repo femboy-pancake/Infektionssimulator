@@ -9,12 +9,16 @@ public class humanScript : MonoBehaviour
     public GameObject infected;
     public GameObject immune;
     int diceRoll;
+    public GameObject txtobj;
+    public GameObject human;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
     {
-        //transform.position = new Vector3(-15, 3, 0);
+        txtobj = GameObject.Find("None-sick Count");
+        txtobj.GetComponent<HumanCouintScript>().humancount++;
+        txtobj.GetComponent<HumanCouintScript>().ChangeText();
     }
     void Start()
     {
@@ -39,7 +43,7 @@ public class humanScript : MonoBehaviour
     {
 
         diceRoll = Random.Range(0, 100);
-        if (diceRoll <= 50 && gameObject.tag == "human")
+        if (diceRoll >= 75 && gameObject.tag == "human")
         {
             
             Instantiate(infected, this.transform.position, this.transform.rotation);
@@ -48,11 +52,11 @@ public class humanScript : MonoBehaviour
 
         }
 
-        else if (diceRoll >= 51 && gameObject.tag == "human")
+       // else if (diceRoll >= 51 && gameObject.tag == "human")
         {
-            Instantiate(immune, this.transform.position, this.transform.rotation);
-            GetComponent<ImmuneScript>().enabled = false;
-            Destroy(gameObject);
+        //    Instantiate(immune, this.transform.position, this.transform.rotation);
+         //   GetComponent<ImmuneScript>().enabled = false;
+          //  Destroy(gameObject);
 
             
         }
@@ -60,16 +64,18 @@ public class humanScript : MonoBehaviour
     }
 
     
-    
-
-    
-        
-
-   
 
 
 
-    
+
+
+
+
+
+
+
+
+
 }
     
         

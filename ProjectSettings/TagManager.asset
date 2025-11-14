@@ -8,6 +8,10 @@ TagManager:
   - immune
   - human
   - dead
+  - infected count
+  - immune count
+  - human count
+  - dead count
   layers:
   - Default
   - TransparentFX

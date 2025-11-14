@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3656770827256443292}
   - component: {fileID: 8954622502110075819}
   - component: {fileID: 2172544921563631889}
+  - component: {fileID: 1729311451774951470}
   m_Layer: 0
   m_Name: immune 1
   m_TagString: immune
@@ -100,3 +101,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f099c63a2dae0469a49b5b48b24de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1729311451774951470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3244508348460493497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7deeeee0b30384c48960ba9724c0f5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPos: {x: 0, y: 0, z: 0}
+  speed: 5
+  infected: {fileID: 5681413723045955162, guid: 8da1dd69842f3cc428970928d319dce4, type: 3}
+  immune: {fileID: 3244508348460493497}

@@ -11,6 +11,8 @@ public class InfectedScript : MonoBehaviour
     int diceRoll;
     public GameObject immune;
     public GameObject dead;
+    public GameObject txtobj;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -33,14 +35,14 @@ public class InfectedScript : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         diceRoll = Random.Range(0, 100);
-        if (diceRoll <= 33 && gameObject.tag == "infected")
+        if (diceRoll <= 50 && gameObject.tag == "infected")
         {
             Instantiate(human, this.transform.position, this.transform.rotation);
             GetComponent<humanScript>().enabled = false;
             Destroy(gameObject);
         }
 
-        else if (diceRoll <= 66 && gameObject.tag == "infected")
+        else if (diceRoll <= 79 && gameObject.tag == "infected")
         {
             Instantiate(immune, this.transform.position, this.transform.rotation);
             GetComponent<ImmuneScript>().enabled = false;
@@ -49,7 +51,7 @@ public class InfectedScript : MonoBehaviour
 
         }
 
-        else if (diceRoll >= 67 && gameObject.tag == "infected")
+        else if (diceRoll >= 80 && gameObject.tag == "infected")
         {
             Instantiate(dead, this.transform.position, this.transform.rotation);
             GetComponent<DeadScript>().enabled = false;
@@ -83,5 +85,12 @@ public class InfectedScript : MonoBehaviour
 
 
     }
-    
+
+    private void Awake()
+    {
+        txtobj = GameObject.Find("Infected Count");
+        txtobj.GetComponent<infectedcouintScript>().infected++;
+        txtobj.GetComponent<infectedcouintScript>().ChangeText();
+    }
+
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ImmuneScript : MonoBehaviour
 {
+    public GameObject txtobj;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,5 +22,11 @@ public class ImmuneScript : MonoBehaviour
         {
             Other.transform.GetComponent<humanScript>().Spawn();
         }
+    }
+    void Awake()
+    {
+        txtobj = GameObject.Find("immune Count");
+        txtobj.GetComponent<ImmuneCountScript>().Immune++;
+        txtobj.GetComponent<ImmuneCountScript>().ChangeText();
     }
 }

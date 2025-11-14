@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8305758213315068595}
   - component: {fileID: 290448241318222642}
+  - component: {fileID: 2932658731397441221}
+  - component: {fileID: -4236749795888898369}
   m_Layer: 0
   m_Name: immun
   m_TagString: immune
@@ -87,3 +89,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2932658731397441221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6012350640076056632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f099c63a2dae0469a49b5b48b24de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4236749795888898369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6012350640076056632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7deeeee0b30384c48960ba9724c0f5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPos: {x: 0, y: 0, z: 0}
+  speed: 5
+  infected: {fileID: 3532028862761319202, guid: 3f7c0d3b2edab93429ed8d8d0af72fb6, type: 3}
+  immune: {fileID: 3244508348460493497, guid: 6f30f636f687d0c4598a286c2415e534, type: 3}

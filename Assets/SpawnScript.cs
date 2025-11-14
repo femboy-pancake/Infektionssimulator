@@ -5,7 +5,7 @@ public class SpawnScript : MonoBehaviour
     public GameObject prefab;
     void Start()
     {
-        for (var i = 0; i < 10; i++)
+        for (var i = 0; i < 30; i++)
         {
             float x = Random.Range(-11f, 11f);
             float y = Random.Range(4.5f, -4.5f);
