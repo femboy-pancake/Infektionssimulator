@@ -10,10 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2767836358984149490}
   - component: {fileID: 8106915792582625642}
-  - component: {fileID: 7225411674391937633}
   - component: {fileID: 3210295405250666827}
   - component: {fileID: 5515494375978856339}
-  - component: {fileID: 7403048265488227849}
   - component: {fileID: 4371226946714261838}
   - component: {fileID: 1076558340393413850}
   m_Layer: 0
@@ -93,18 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7225411674391937633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681413723045955162}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f099c63a2dae0469a49b5b48b24de4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3210295405250666827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,8 +105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   speed: 5
-  infected: {fileID: 3532028862761319202, guid: 3f7c0d3b2edab93429ed8d8d0af72fb6, type: 3}
+  infected: {fileID: 5681413723045955162}
   immune: {fileID: 6012350640076056632, guid: 86f0cb814828c924c95da4982b853c08, type: 3}
+  txtobj: {fileID: 0}
+  human: {fileID: 0}
 --- !u!114 &5515494375978856339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,18 +126,7 @@ MonoBehaviour:
   human: {fileID: 1822267567701667435, guid: aec2b1c8a7e129e45a079d3c26bd8c0a, type: 3}
   immune: {fileID: 6012350640076056632, guid: 86f0cb814828c924c95da4982b853c08, type: 3}
   dead: {fileID: 2103954425342155258, guid: 0b24c1aca97f1f74c96b1256d781c64b, type: 3}
---- !u!114 &7403048265488227849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681413723045955162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98548d3a0de1df4bb88a9d969458c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  txtobj: {fileID: 0}
 --- !u!50 &4371226946714261838
 Rigidbody2D:
   serializedVersion: 5

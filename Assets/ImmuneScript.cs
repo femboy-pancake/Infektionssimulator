@@ -25,7 +25,7 @@ public class ImmuneScript : MonoBehaviour
     }
     void Awake()
     {
-        txtobj = GameObject.Find("immune Count");
+        txtobj = GameObject.Find("Immune Count");
         txtobj.GetComponent<ImmuneCountScript>().Immune++;
         txtobj.GetComponent<ImmuneCountScript>().ChangeText();
     }

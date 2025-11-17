@@ -19,7 +19,7 @@ public class ImmuneCountScript : MonoBehaviour
     }
     public void ChangeText()
     {
-        this.GetComponent<TMP_Text>().text = " human: " + Immune.ToString();
+        this.GetComponent<TMP_Text>().text = " Immune: " + Immune.ToString();
 
     }
 }

@@ -17,8 +17,9 @@ public class humanScript : MonoBehaviour
     void Awake()
     {
         txtobj = GameObject.Find("None-sick Count");
-        txtobj.GetComponent<HumanCouintScript>().humancount++;
-        txtobj.GetComponent<HumanCouintScript>().ChangeText();
+
+
+        
     }
     void Start()
     {
@@ -45,9 +46,10 @@ public class humanScript : MonoBehaviour
         diceRoll = Random.Range(0, 100);
         if (diceRoll >= 75 && gameObject.tag == "human")
         {
-            
             Instantiate(infected, this.transform.position, this.transform.rotation);
             GetComponent<humanScript>().enabled = false;
+            txtobj.GetComponent<HumanCouintScript>().humancount--;
+            txtobj.GetComponent<HumanCouintScript>().ChangeText();
             Destroy(gameObject);
 
         }
